@@ -1,0 +1,13 @@
+{
+  "name": "world-explorer-original",
+  "version": "1.0.0",
+  "description": "World Explorer - OOP variant for CSC2923 final assignment",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "electron": "^25.0.0"
+  }
+}

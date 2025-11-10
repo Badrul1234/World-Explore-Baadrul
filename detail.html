@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Country Details — World Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    main.main.single { max-width:900px; margin:28px auto; grid-template-columns:1fr; }
+    .detail-flag { max-width:320px; display:block; margin:10px auto 16px; border-radius:8px; }
+    .detail-table td { padding:8px 10px; vertical-align:top; }
+    .actions-row { display:flex; gap:10px; justify-content:flex-end; margin-top:14px; }
+    .notes-input { width:100%; min-height:90px; padding:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.03); background:transparent; color:inherit; }
+    .back-link { text-decoration:none; color:inherit; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="title-box"><h1>World Explorer</h1></div>
+    <div class="right-box"></div>
+  </header>
+
+  <main class="main single">
+    <section class="card">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h2 id="country-name" style="margin:0">Country</h2>
+        <a href="index.html" class="back-link btn small secondary" id="back-home">Back</a>
+      </div>
+
+      <img id="flag-img" class="detail-flag" src="" alt="flag">
+
+      <table class="detail-table" style="width:100%; margin-top:8px; color:inherit;">
+        <tbody id="detail-body"></tbody>
+      </table>
+
+      <div style="margin-top:12px;">
+        <label for="notes">Notes (optional)</label>
+        <textarea id="notes" class="notes-input" placeholder="Add your notes here..."></textarea>
+      </div>
+
+      <div class="actions-row">
+        <button id="btn-add-itinerary" class="btn">Add to itinerary</button>
+        <a id="btn-open-map" class="btn secondary small" target="_blank" rel="noopener">Open Map</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="renderer/detail.js"></script>
+</body>
+</html>

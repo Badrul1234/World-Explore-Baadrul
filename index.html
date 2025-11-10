@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>World Explorer — Modern</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Topbar -->
+  <header class="topbar">
+    <div class="title-box">
+      <h1>World Explorer</h1>
+    </div>
+    <div class="right-box"></div>
+  </header>
+
+  <!-- Main content -->
+  <main class="main">
+    
+    <!-- Search Card -->
+    <section class="search-area card">
+      <div class="row input-wrapper">
+        <input id="q" placeholder="Search country (e.g. Malaysia)" class="input" />
+        <button id="search" class="btn">Search</button>
+      </div>
+      <div class="row" style="margin-top:10px; gap:8px;">
+        <select id="history" class="input small"></select>
+        <button id="btnClearCache" class="btn secondary small">Clear Cache</button>
+      </div>
+      <div id="status" class="small muted">Ready</div>
+    </section>
+
+    <!-- Country Results -->
+    <section id="results" class="results-grid"></section>
+
+    <!-- Itinerary Panel -->
+    <aside class="itinerary-panel card">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <h3>My Itinerary</h3>
+      </div>
+      <div id="it-list"></div>
+      <div class="row" style="margin-top:8px">
+        <input id="manual-name" class="input" placeholder="Add country manually"/>
+        <button id="manual-add" class="btn small">Add</button>
+      </div>
+    </aside>
+
+  </main>
+
+  <!-- Detail Modal (kept for quick details; you also have detail.html if you used it earlier) -->
+  <div id="detail-modal" class="modal">
+    <div class="modal-card">
+      <button id="close-detail" class="btn small secondary">Close</button>
+      <div id="detail-content"></div>
+    </div>
+  </div>
+
+  <!-- Edit Notes Modal -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-card">
+      <h3>Edit Notes</h3>
+      <textarea id="edit-notes-text" rows="4"></textarea>
+      <div class="modal-actions">
+        <button id="edit-save" class="btn small">Save</button>
+        <button id="edit-cancel" class="btn secondary small">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete Confirm Modal -->
+  <div id="delete-modal" class="modal">
+    <div class="modal-card">
+      <h3>Delete Itinerary</h3>
+      <p>Are you sure you want to delete this itinerary?</p>
+      <div class="modal-actions">
+        <button id="delete-confirm" class="btn small">Yes</button>
+        <button id="delete-cancel" class="btn secondary small">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="renderer/app.js"></script>
+</body>
+</html>
